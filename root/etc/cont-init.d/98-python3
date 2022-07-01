@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bash
+
+echo "**** installing python3 dev environment ****"
+apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    python3-pip \
+    python3-venv
+
+# Exit if no installable commands
+if [ -z ${PIP3_INSTALL+x} ]; then
+    echo "**** nothing to install using pip3 ****"
+    exit 0
+fi
+
+echo "**** installing pip3 packages ****"
+# Split list of commands on delimiter '|'
+IFS='|'
+PIP3_INSTALL=(${PIP3_INSTALL})
+for CMD in "${PIP3_INSTALL[@]}"; do
+    echo "pip3 install ${CMD}"
+    pip3 install ${CMD}
+done

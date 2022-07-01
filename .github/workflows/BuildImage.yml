@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "m10an/code-server-python3"
+  ENDPOINT: "m10an/linuxserver-mod-python3"
   BRANCH: "main"
 
 jobs:

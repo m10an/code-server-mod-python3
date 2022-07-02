@@ -10,5 +10,5 @@ Similarly, for installing multiple packages separate them by `|`. E.g., to insta
 
 ```yaml
 - DOCKER_MODS=ghcr.io/m10an/linuxserver-mod-python3:latest
-- PIP_INSTALL=numpy|pandas|scikit-learn
+- PIP3_INSTALL=numpy|pandas|scikit-learn
 ```

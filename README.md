@@ -6,8 +6,9 @@ In code-server docker arguments, set an environment variable `DOCKER_MODS=ghcr.i
 
 If adding multiple mods, enter them in an array separated by `|`, such as `DOCKER_MODS=ghcr.io/m10an/linuxserver-mod-python3:latest|linuxserver/mods:code-server-mod2`
 
-Similarly, for installing multiple packages separate them by |. E.g., to install numpy, pandas and scikit-learn add the following lines to your docker compose service:
+Similarly, for installing multiple packages separate them by `|`. E.g., to install numpy, pandas and scikit-learn add the following lines to your docker compose service:
+
 ```yaml
 - DOCKER_MODS=ghcr.io/m10an/linuxserver-mod-python3:latest
-- INSTALL_PACKAGES=numpy|pandas|scikit-learn
+- PIP_INSTALL=numpy|pandas|scikit-learn
 ```
